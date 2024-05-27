@@ -1,5 +1,12 @@
-.game-board{
+.game-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
   margin: 25px;
+  padding: 10px;
+}
+
+.game-board{
   width: 500px;
   height: 500px;
   border: 1px solid #ccc;
@@ -8,7 +15,38 @@
   grid-template-rows: repeat(3, 1fr);
 }
 
+.game-menu {
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  height: 500px;
+  border: red 1px solid;
+}
+
+.restart-button{
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    height: fit-content;
+}
+
 .game-cell{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
   border: 1px solid #ccc;
+  font-size: 2em;
   cursor: pointer;
+  user-select: none;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 }
