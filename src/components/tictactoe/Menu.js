@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Menu = ({ status, history, jumpTo, restartGame }) => {
+const Menu = ({ status, history, moveToStep, restartGame }) => {
   return (
     <div className='game-menu'>
       <div className='status'>{status}</div>
@@ -11,7 +11,7 @@ const Menu = ({ status, history, jumpTo, restartGame }) => {
           const desc = move ? `Go to move #${move}` : 'Go to game start';
           return (
             <li key={move}>
-              <button onClick={() => jumpTo(move)}>{desc}</button>
+              <button onClick={() => moveToStep(move)}>{desc}</button>
             </li>
           );
         })}
